@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. User can create, edit, and delete keyword/prompt entries via API endpoints
   4. Redis and BullMQ are configured and a test job can be enqueued and processed by the worker
   5. Simple authentication prevents unauthorized access to the application
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
-- [ ] 01-03: TBD
+- [ ] 01-01-PLAN.md — Project scaffold, Docker Compose, Drizzle schema, database migrations
+- [ ] 01-02-PLAN.md — BullMQ queue + worker, Vercel AI SDK providers
+- [ ] 01-03-PLAN.md — Authentication middleware + login, Keywords and Brands CRUD API
 
 ### Phase 2: Data Pipeline
 **Goal**: The system can query all three AI platforms, analyze responses for brand mentions, and run checks automatically on a daily schedule with cost controls
@@ -92,7 +92,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/3 | Not started | - |
+| 1. Foundation | 0/3 | Planning complete | - |
 | 2. Data Pipeline | 0/3 | Not started | - |
 | 3. Dashboard | 0/2 | Not started | - |
 | 4. Alerts and Reporting | 0/2 | Not started | - |
