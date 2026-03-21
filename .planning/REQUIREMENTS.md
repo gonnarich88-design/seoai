@@ -55,8 +55,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFR-01**: System uses Next.js 15 with App Router and TypeScript
 - [x] **INFR-02**: System uses PostgreSQL 16 with Drizzle ORM for data persistence
-- [ ] **INFR-03**: System uses BullMQ with Redis for job scheduling and retry logic
-- [ ] **INFR-04**: System uses Vercel AI SDK for unified AI provider interface
+- [x] **INFR-03**: System uses BullMQ with Redis for job scheduling and retry logic
+- [x] **INFR-04**: System uses Vercel AI SDK for unified AI provider interface
 - [ ] **INFR-05**: System has simple authentication (Auth.js or middleware-based) to prevent unauthorized access
 
 ## v2 Requirements
@@ -128,8 +128,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ALRT-05 | Phase 4 | Pending |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
-| INFR-03 | Phase 1 | Pending |
-| INFR-04 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Complete |
+| INFR-04 | Phase 1 | Complete |
 | INFR-05 | Phase 1 | Pending |
 
 **Coverage:**
