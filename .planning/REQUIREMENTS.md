@@ -97,46 +97,46 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Pending | Pending |
-| DATA-02 | Pending | Pending |
-| DATA-03 | Pending | Pending |
-| DATA-04 | Pending | Pending |
-| DATA-05 | Pending | Pending |
-| DATA-06 | Pending | Pending |
-| DATA-07 | Pending | Pending |
-| DATA-08 | Pending | Pending |
-| ANLS-01 | Pending | Pending |
-| ANLS-02 | Pending | Pending |
-| ANLS-03 | Pending | Pending |
-| ANLS-04 | Pending | Pending |
-| ANLS-05 | Pending | Pending |
-| ANLS-06 | Pending | Pending |
-| AUTO-01 | Pending | Pending |
-| AUTO-02 | Pending | Pending |
-| AUTO-03 | Pending | Pending |
-| AUTO-04 | Pending | Pending |
-| DASH-01 | Pending | Pending |
-| DASH-02 | Pending | Pending |
-| DASH-03 | Pending | Pending |
-| DASH-04 | Pending | Pending |
-| DASH-05 | Pending | Pending |
-| DASH-06 | Pending | Pending |
-| ALRT-01 | Pending | Pending |
-| ALRT-02 | Pending | Pending |
-| ALRT-03 | Pending | Pending |
-| ALRT-04 | Pending | Pending |
-| ALRT-05 | Pending | Pending |
-| INFR-01 | Pending | Pending |
-| INFR-02 | Pending | Pending |
-| INFR-03 | Pending | Pending |
-| INFR-04 | Pending | Pending |
-| INFR-05 | Pending | Pending |
+| DATA-01 | Phase 1 | Pending |
+| DATA-02 | Phase 2 | Pending |
+| DATA-03 | Phase 2 | Pending |
+| DATA-04 | Phase 2 | Pending |
+| DATA-05 | Phase 2 | Pending |
+| DATA-06 | Phase 2 | Pending |
+| DATA-07 | Phase 2 | Pending |
+| DATA-08 | Phase 2 | Pending |
+| ANLS-01 | Phase 2 | Pending |
+| ANLS-02 | Phase 2 | Pending |
+| ANLS-03 | Phase 2 | Pending |
+| ANLS-04 | Phase 2 | Pending |
+| ANLS-05 | Phase 2 | Pending |
+| ANLS-06 | Phase 2 | Pending |
+| AUTO-01 | Phase 2 | Pending |
+| AUTO-02 | Phase 2 | Pending |
+| AUTO-03 | Phase 2 | Pending |
+| AUTO-04 | Phase 2 | Pending |
+| DASH-01 | Phase 3 | Pending |
+| DASH-02 | Phase 3 | Pending |
+| DASH-03 | Phase 3 | Pending |
+| DASH-04 | Phase 3 | Pending |
+| DASH-05 | Phase 3 | Pending |
+| DASH-06 | Phase 3 | Pending |
+| ALRT-01 | Phase 4 | Pending |
+| ALRT-02 | Phase 4 | Pending |
+| ALRT-03 | Phase 4 | Pending |
+| ALRT-04 | Phase 4 | Pending |
+| ALRT-05 | Phase 4 | Pending |
+| INFR-01 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 34 total
-- Mapped to phases: 0
-- Unmapped: 34 ⚠️
+- Mapped to phases: 34
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-21*
-*Last updated: 2026-03-21 after initial definition*
+*Last updated: 2026-03-21 after roadmap creation*
