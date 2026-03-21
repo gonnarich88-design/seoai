@@ -9,7 +9,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Data Collection
 
-- [ ] **DATA-01**: User can create, edit, and delete keyword/prompt entries for tracking
+- [x] **DATA-01**: User can create, edit, and delete keyword/prompt entries for tracking
 - [ ] **DATA-02**: User can query ChatGPT (OpenAI API) with tracking prompts and receive normalized responses
 - [ ] **DATA-03**: User can query Perplexity API with tracking prompts and receive normalized responses with citations
 - [ ] **DATA-04**: User can query Gemini API with tracking prompts and receive normalized responses
@@ -57,7 +57,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **INFR-02**: System uses PostgreSQL 16 with Drizzle ORM for data persistence
 - [x] **INFR-03**: System uses BullMQ with Redis for job scheduling and retry logic
 - [x] **INFR-04**: System uses Vercel AI SDK for unified AI provider interface
-- [ ] **INFR-05**: System has simple authentication (Auth.js or middleware-based) to prevent unauthorized access
+- [x] **INFR-05**: System has simple authentication (Auth.js or middleware-based) to prevent unauthorized access
 
 ## v2 Requirements
 
@@ -97,7 +97,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
 | DATA-02 | Phase 2 | Pending |
 | DATA-03 | Phase 2 | Pending |
 | DATA-04 | Phase 2 | Pending |
@@ -130,7 +130,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Complete |
-| INFR-05 | Phase 1 | Pending |
+| INFR-05 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 34 total
