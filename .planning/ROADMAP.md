@@ -46,12 +46,12 @@ Plans:
   3. System detects brand mentions (including aliases) in AI responses with position tracking, sentiment classification, and highlighted context
   4. Scheduled daily checks run automatically at a configurable time, with rate limiting per provider and daily budget caps that pause checks when exceeded
   5. User can define competitor brands and the system tracks their mentions alongside the user's own brand
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
-- [ ] 02-03: TBD
+- [ ] 02-01-PLAN.md — Query executor, cost calculator, env vars, schema migration, queue job helpers
+- [ ] 02-02-PLAN.md — Brand detector, sentiment analyzer, snapshot aggregator, worker job handlers
+- [ ] 02-03-PLAN.md — Budget checker, daily scheduler, on-demand check API, scheduled-check handler
 
 ### Phase 3: Dashboard
 **Goal**: User can see and interact with all collected data through a web dashboard showing visibility scores, competitor comparisons, trends, and full response archives
