@@ -6,7 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "worker": "tsx src/worker/index.ts",
+    "worker:dev": "tsx watch src/worker/index.ts",
+    "services:up": "docker compose up -d",
+    "services:down": "docker compose down"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.52",
@@ -16,6 +20,7 @@
     "ai": "^4.3.19",
     "bullmq": "^5.71.0",
     "date-fns": "^4.1.0",
+    "dotenv": "^17.3.1",
     "drizzle-orm": "^0.45.1",
     "ioredis": "^5.10.1",
     "next": "15.5.14",
