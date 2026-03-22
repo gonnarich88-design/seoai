@@ -33,8 +33,7 @@ function setupArchive(runs: any[], total: number) {
 
   // Third call: brand mentions for the runs
   const mockMentionsWhere = vi.fn().mockResolvedValue([]);
-  const mockMentionsOn = vi.fn().mockReturnValue({ where: mockMentionsWhere });
-  const mockMentionsLeftJoin = vi.fn().mockReturnValue({ on: mockMentionsOn });
+  const mockMentionsLeftJoin = vi.fn().mockReturnValue({ where: mockMentionsWhere });
   const mockMentionsFrom = vi.fn().mockReturnValue({ leftJoin: mockMentionsLeftJoin });
 
   let callCount = 0;

@@ -22,8 +22,7 @@ function makeRequest(params: Record<string, string> = {}) {
 function setupSnapshots(data: any[]) {
   const mockOrderBy = vi.fn().mockResolvedValue(data);
   const mockWhere = vi.fn().mockReturnValue({ orderBy: mockOrderBy });
-  const mockOn = vi.fn().mockReturnValue({ where: mockWhere });
-  const mockLeftJoin = vi.fn().mockReturnValue({ on: mockOn });
+  const mockLeftJoin = vi.fn().mockReturnValue({ where: mockWhere });
   const mockFrom = vi.fn().mockReturnValue({ leftJoin: mockLeftJoin });
   mockDb.select.mockReturnValue({ from: mockFrom } as any);
 }
