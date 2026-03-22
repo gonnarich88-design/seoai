@@ -5,6 +5,8 @@ import { handleQueryJob } from './handlers/query-handler';
 import { handleAnalysisJob } from './handlers/analysis-handler';
 import { handleSentimentJob } from './handlers/sentiment-handler';
 import { handleSnapshotJob } from './handlers/snapshot-handler';
+import { handleAlertDetectionJob } from './handlers/alert-handler';
+import { handleAlertNotifyJob } from './handlers/alert-notify-handler';
 import { setupDailyScheduler } from './handlers/scheduler-setup';
 import { checkBudget } from '@/lib/pipeline/budget-checker';
 import { addQueryJobs } from '@/lib/queue/queues';
@@ -43,6 +45,10 @@ const worker = new Worker(
         return handleSentimentJob(job);
       case 'snapshot-job':
         return handleSnapshotJob(job);
+      case 'alert-detection-job':
+        return handleAlertDetectionJob(job);
+      case 'alert-notify-job':
+        return handleAlertNotifyJob(job);
       case 'scheduled-check': {
         // Daily scheduled check: load all active keywords, enqueue for all providers
         const activeKeywords = await db.select().from(keywords).where(eq(keywords.isActive, true));
