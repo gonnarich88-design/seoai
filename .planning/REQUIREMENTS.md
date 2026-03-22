@@ -10,13 +10,13 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Data Collection
 
 - [x] **DATA-01**: User can create, edit, and delete keyword/prompt entries for tracking
-- [ ] **DATA-02**: User can query ChatGPT (OpenAI API) with tracking prompts and receive normalized responses
-- [ ] **DATA-03**: User can query Perplexity API with tracking prompts and receive normalized responses with citations
-- [ ] **DATA-04**: User can query Gemini API with tracking prompts and receive normalized responses
-- [ ] **DATA-05**: System runs each prompt 3 times per check cycle to reduce non-deterministic noise
-- [ ] **DATA-06**: System tracks API cost per query run and displays cumulative cost per keyword/platform
-- [ ] **DATA-07**: System stores raw AI responses for re-analysis and auditing
-- [ ] **DATA-08**: System tracks prompt template versions so methodology changes are visible in trend data
+- [x] **DATA-02**: User can query ChatGPT (OpenAI API) with tracking prompts and receive normalized responses
+- [x] **DATA-03**: User can query Perplexity API with tracking prompts and receive normalized responses with citations
+- [x] **DATA-04**: User can query Gemini API with tracking prompts and receive normalized responses
+- [x] **DATA-05**: System runs each prompt 3 times per check cycle to reduce non-deterministic noise
+- [x] **DATA-06**: System tracks API cost per query run and displays cumulative cost per keyword/platform
+- [x] **DATA-07**: System stores raw AI responses for re-analysis and auditing
+- [x] **DATA-08**: System tracks prompt template versions so methodology changes are visible in trend data
 
 ### Analysis
 
@@ -98,13 +98,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | DATA-01 | Phase 1 | Complete |
-| DATA-02 | Phase 2 | Pending |
-| DATA-03 | Phase 2 | Pending |
-| DATA-04 | Phase 2 | Pending |
-| DATA-05 | Phase 2 | Pending |
-| DATA-06 | Phase 2 | Pending |
-| DATA-07 | Phase 2 | Pending |
-| DATA-08 | Phase 2 | Pending |
+| DATA-02 | Phase 2 | Complete |
+| DATA-03 | Phase 2 | Complete |
+| DATA-04 | Phase 2 | Complete |
+| DATA-05 | Phase 2 | Complete |
+| DATA-06 | Phase 2 | Complete |
+| DATA-07 | Phase 2 | Complete |
+| DATA-08 | Phase 2 | Complete |
 | ANLS-01 | Phase 2 | Pending |
 | ANLS-02 | Phase 2 | Pending |
 | ANLS-03 | Phase 2 | Pending |

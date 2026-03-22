@@ -4,12 +4,12 @@ milestone: v1.0
 milestone_name: milestone
 status: unknown
 stopped_at: Phase 2 context gathered
-last_updated: "2026-03-21T19:09:49.343Z"
+last_updated: "2026-03-22T10:50:59.166Z"
 progress:
   total_phases: 4
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 4
 ---
 
 # Project State
@@ -19,18 +19,18 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-20)
 
 **Core value:** Users can see how AI platforms mention their brand/keywords and how that changes over time
-**Current focus:** Phase 01 — foundation
+**Current focus:** Phase 02 — data-pipeline
 
 ## Current Position
 
-Phase: 01 (foundation) — COMPLETE
-Plan: 3 of 3 (all complete)
+Phase: 02 (data-pipeline) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 3
+- Total plans completed: 4
 - Average duration: 4min
 - Total execution time: 0.2 hours
 
@@ -48,6 +48,7 @@ Plan: 3 of 3 (all complete)
 *Updated after each plan completion*
 | Phase 01 P02 | 3min | 2 tasks | 9 files |
 | Phase 01 P03 | 4min | 2 tasks | 11 files |
+| Phase 02 P01 | 2min | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Recent decisions affecting current work:
 - [Phase 01-03]: Cookie-based auth (seoai-auth httpOnly cookie, 7-day expiry) for simplicity
 - [Phase 01-03]: Login page uses React 19 useActionState + server action pattern
 - [Phase 01-03]: Integration tests skip gracefully when PostgreSQL unavailable
+- [Phase 02-01]: Perplexity citations extracted via (result as any).sources -- AI SDK v4 sources API not fully typed
+- [Phase 02-01]: Price table keyed by model name for direct lookup from MODELS map
+- [Phase 02-01]: Skipped drizzle-kit push -- schema uniqueIndex change committed for next migration
 
 ### Pending Todos
 
@@ -78,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-21T19:09:49.340Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-data-pipeline/02-CONTEXT.md
+Last session: 2026-03-22T10:50:07Z
+Stopped at: Completed 02-01-PLAN.md
+Resume file: .planning/phases/02-data-pipeline/02-01-SUMMARY.md
