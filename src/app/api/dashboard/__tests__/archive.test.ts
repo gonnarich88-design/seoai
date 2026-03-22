@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 vi.mock('@/lib/db/client', () => ({
@@ -37,7 +38,7 @@ function setupArchive(runs: any[], total: number) {
   const mockMentionsFrom = vi.fn().mockReturnValue({ leftJoin: mockMentionsLeftJoin });
 
   let callCount = 0;
-  mockDb.select.mockImplementation((...args: any[]) => {
+  mockDb.select.mockImplementation(() => {
     callCount++;
     if (callCount === 1) return { from: mockFrom } as any;
     if (callCount === 2) return { from: mockCountFrom } as any;

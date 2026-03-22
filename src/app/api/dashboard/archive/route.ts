@@ -32,7 +32,11 @@ export async function GET(request: NextRequest) {
     .where(eq(queryRuns.keywordId, keyword));
 
   // Fetch brand mentions for retrieved runs
-  let mentions: any[] = [];
+  interface MentionRow {
+    mention: typeof brandMentions.$inferSelect;
+    brand: { id: string; name: string } | null;
+  }
+  let mentions: MentionRow[] = [];
   if (runs.length > 0) {
     const runIds = runs.map((r) => r.id);
     mentions = await db
@@ -46,7 +50,16 @@ export async function GET(request: NextRequest) {
   }
 
   // Group mentions by queryRunId
-  const mentionsByRun = new Map<string, any[]>();
+  interface FormattedMention {
+    brandId: string;
+    brandName: string;
+    mentioned: boolean;
+    position: number | null;
+    sentiment: string | null;
+    isRecommended: boolean | null;
+    contextSnippet: string | null;
+  }
+  const mentionsByRun = new Map<string, FormattedMention[]>();
   for (const m of mentions) {
     const list = mentionsByRun.get(m.mention.queryRunId) ?? [];
     list.push({
