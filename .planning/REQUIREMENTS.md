@@ -49,7 +49,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **ALRT-02**: System sends email notifications when alerts are triggered
 - [ ] **ALRT-03**: User sees alert feed in dashboard with read/unread state
 - [ ] **ALRT-04**: System generates weekly summary report of visibility changes
-- [ ] **ALRT-05**: User can export data to CSV for external reporting
+- [x] **ALRT-05**: User can export data to CSV for external reporting
 
 ### Infrastructure
 
@@ -125,7 +125,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ALRT-02 | Phase 4 | Pending |
 | ALRT-03 | Phase 4 | Pending |
 | ALRT-04 | Phase 4 | Pending |
-| ALRT-05 | Phase 4 | Pending |
+| ALRT-05 | Phase 4 | Complete |
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
