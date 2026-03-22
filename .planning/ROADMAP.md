@@ -13,7 +13,7 @@ This roadmap delivers an internal AEO monitoring tool that tracks brand mentions
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Project scaffold, database schema, and infrastructure setup (completed 2026-03-21)
-- [ ] **Phase 2: Data Pipeline** - Query engine, analysis engine, and automated scheduling
+- [x] **Phase 2: Data Pipeline** - Query engine, analysis engine, and automated scheduling (completed 2026-03-22)
 - [ ] **Phase 3: Dashboard** - UI for visibility scores, competitor comparison, trends, and data management
 - [ ] **Phase 4: Alerts and Reporting** - Change detection, notifications, weekly reports, and data export
 
@@ -93,6 +93,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/3 | Complete    | 2026-03-21 |
-| 2. Data Pipeline | 2/3 | In Progress|  |
+| 2. Data Pipeline | 3/3 | Complete   | 2026-03-22 |
 | 3. Dashboard | 0/2 | Not started | - |
 | 4. Alerts and Reporting | 0/2 | Not started | - |

@@ -29,10 +29,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Automation
 
-- [ ] **AUTO-01**: System runs scheduled daily checks for all active keywords across all platforms at configurable time
-- [ ] **AUTO-02**: User can trigger on-demand check for a specific keyword or all keywords
-- [ ] **AUTO-03**: System enforces daily budget cap per platform and pauses checks when exceeded
-- [ ] **AUTO-04**: System implements rate limiting per AI provider to respect API limits
+- [x] **AUTO-01**: System runs scheduled daily checks for all active keywords across all platforms at configurable time
+- [x] **AUTO-02**: User can trigger on-demand check for a specific keyword or all keywords
+- [x] **AUTO-03**: System enforces daily budget cap per platform and pauses checks when exceeded
+- [x] **AUTO-04**: System implements rate limiting per AI provider to respect API limits
 
 ### Dashboard
 
@@ -111,10 +111,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ANLS-04 | Phase 2 | Complete |
 | ANLS-05 | Phase 2 | Complete |
 | ANLS-06 | Phase 2 | Complete |
-| AUTO-01 | Phase 2 | Pending |
-| AUTO-02 | Phase 2 | Pending |
-| AUTO-03 | Phase 2 | Pending |
-| AUTO-04 | Phase 2 | Pending |
+| AUTO-01 | Phase 2 | Complete |
+| AUTO-02 | Phase 2 | Complete |
+| AUTO-03 | Phase 2 | Complete |
+| AUTO-04 | Phase 2 | Complete |
 | DASH-01 | Phase 3 | Pending |
 | DASH-02 | Phase 3 | Pending |
 | DASH-03 | Phase 3 | Pending |
