@@ -36,10 +36,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Dashboard
 
-- [ ] **DASH-01**: User sees overview dashboard with current visibility scores per platform and key metrics
-- [ ] **DASH-02**: User sees competitor comparison table showing visibility scores side-by-side
-- [ ] **DASH-03**: User sees trend charts showing visibility score changes over time per keyword per platform
-- [ ] **DASH-04**: User can browse full AI response archive with brand mentions highlighted
+- [x] **DASH-01**: User sees overview dashboard with current visibility scores per platform and key metrics
+- [x] **DASH-02**: User sees competitor comparison table showing visibility scores side-by-side
+- [x] **DASH-03**: User sees trend charts showing visibility score changes over time per keyword per platform
+- [x] **DASH-04**: User can browse full AI response archive with brand mentions highlighted
 - [ ] **DASH-05**: User can manage keywords (add, edit, delete, toggle active/inactive)
 - [ ] **DASH-06**: User can manage brands (own brand + competitors with aliases)
 
@@ -115,10 +115,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AUTO-02 | Phase 2 | Complete |
 | AUTO-03 | Phase 2 | Complete |
 | AUTO-04 | Phase 2 | Complete |
-| DASH-01 | Phase 3 | Pending |
-| DASH-02 | Phase 3 | Pending |
-| DASH-03 | Phase 3 | Pending |
-| DASH-04 | Phase 3 | Pending |
+| DASH-01 | Phase 3 | Complete |
+| DASH-02 | Phase 3 | Complete |
+| DASH-03 | Phase 3 | Complete |
+| DASH-04 | Phase 3 | Complete |
 | DASH-05 | Phase 3 | Pending |
 | DASH-06 | Phase 3 | Pending |
 | ALRT-01 | Phase 4 | Pending |
