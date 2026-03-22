@@ -7,6 +7,10 @@ const envSchema = z.object({
   OPENAI_API_KEY: z.string().optional(),
   GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional(),
   PERPLEXITY_API_KEY: z.string().optional(),
+  DAILY_BUDGET_OPENAI: z.coerce.number().default(1.0),
+  DAILY_BUDGET_PERPLEXITY: z.coerce.number().default(1.0),
+  DAILY_BUDGET_GEMINI: z.coerce.number().default(1.0),
+  CHECK_SCHEDULE_CRON: z.string().default('0 0 * * *'),
 });
 
 export const env = envSchema.parse(process.env);

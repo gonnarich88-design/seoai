@@ -8,6 +8,7 @@ import {
   jsonb,
   date,
   index,
+  uniqueIndex,
 } from 'drizzle-orm/pg-core';
 import { relations } from 'drizzle-orm';
 
@@ -139,7 +140,7 @@ export const dailySnapshots = pgTable(
     createdAt: timestamp('created_at').defaultNow().notNull(),
   },
   (table) => [
-    index('idx_daily_snapshots_lookup').on(
+    uniqueIndex('uq_daily_snapshots_lookup').on(
       table.keywordId,
       table.brandId,
       table.providerId,
