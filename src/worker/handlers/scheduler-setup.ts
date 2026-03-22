@@ -16,4 +16,19 @@ export async function setupDailyScheduler() {
   );
 
   console.log(`Daily scheduler configured with cron: ${cronPattern}`);
+
+  const weeklyReportCron = process.env.WEEKLY_REPORT_CRON || '0 9 * * 1';
+  await seoaiQueue.upsertJobScheduler(
+    'weekly-report-scheduler',
+    { pattern: weeklyReportCron },
+    {
+      name: 'weekly-report',
+      data: {},
+      opts: {
+        priority: 10,
+      },
+    },
+  );
+
+  console.log(`Weekly report scheduler configured with cron: ${weeklyReportCron}`);
 }
