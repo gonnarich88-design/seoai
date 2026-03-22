@@ -45,8 +45,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Alerts & Reports
 
-- [ ] **ALRT-01**: System detects meaningful changes in brand visibility (appeared, disappeared, rank changed)
-- [ ] **ALRT-02**: System sends email notifications when alerts are triggered
+- [x] **ALRT-01**: System detects meaningful changes in brand visibility (appeared, disappeared, rank changed)
+- [x] **ALRT-02**: System sends email notifications when alerts are triggered
 - [ ] **ALRT-03**: User sees alert feed in dashboard with read/unread state
 - [ ] **ALRT-04**: System generates weekly summary report of visibility changes
 - [x] **ALRT-05**: User can export data to CSV for external reporting
@@ -121,8 +121,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DASH-04 | Phase 3 | Complete |
 | DASH-05 | Phase 3 | Complete |
 | DASH-06 | Phase 3 | Complete |
-| ALRT-01 | Phase 4 | Pending |
-| ALRT-02 | Phase 4 | Pending |
+| ALRT-01 | Phase 4 | Complete |
+| ALRT-02 | Phase 4 | Complete |
 | ALRT-03 | Phase 4 | Pending |
 | ALRT-04 | Phase 4 | Pending |
 | ALRT-05 | Phase 4 | Complete |
