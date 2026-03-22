@@ -63,11 +63,12 @@ Plans:
   3. User sees trend charts showing visibility score changes over time per keyword per platform
   4. User can browse the full AI response archive with brand mentions highlighted in context
   5. User can manage keywords and brands (add, edit, delete, toggle active/inactive, configure aliases) through the dashboard UI
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — Dashboard API routes (overview, trends, archive), layout shell with sidebar and keyword selector
+- [ ] 03-02-PLAN.md — Data view pages: Overview, Competitors, Trends, Archive with Recharts charts
+- [ ] 03-03-PLAN.md — Management pages: Keywords and Brands CRUD UI with modal forms
 
 ### Phase 4: Alerts and Reporting
 **Goal**: The system proactively notifies users of meaningful changes and provides reporting tools for stakeholder communication
@@ -94,5 +95,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/3 | Complete    | 2026-03-21 |
 | 2. Data Pipeline | 3/3 | Complete    | 2026-03-22 |
-| 3. Dashboard | 0/2 | Not started | - |
+| 3. Dashboard | 0/3 | Not started | - |
 | 4. Alerts and Reporting | 0/2 | Not started | - |
