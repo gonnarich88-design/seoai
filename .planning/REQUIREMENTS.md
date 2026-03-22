@@ -20,12 +20,12 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Analysis
 
-- [ ] **ANLS-01**: System detects brand/keyword mentions in AI responses using alias-aware matching
-- [ ] **ANLS-02**: System calculates visibility score (% of runs where brand is mentioned) per keyword per platform
-- [ ] **ANLS-03**: User can define competitor brands and system tracks their mentions alongside own brand
-- [ ] **ANLS-04**: System tracks mention position (1st, 2nd, 3rd recommended) in AI responses
-- [ ] **ANLS-05**: System classifies mention sentiment as positive, neutral, or negative
-- [ ] **ANLS-06**: System stores full response text with brand mention highlighting for browsing
+- [x] **ANLS-01**: System detects brand/keyword mentions in AI responses using alias-aware matching
+- [x] **ANLS-02**: System calculates visibility score (% of runs where brand is mentioned) per keyword per platform
+- [x] **ANLS-03**: User can define competitor brands and system tracks their mentions alongside own brand
+- [x] **ANLS-04**: System tracks mention position (1st, 2nd, 3rd recommended) in AI responses
+- [x] **ANLS-05**: System classifies mention sentiment as positive, neutral, or negative
+- [x] **ANLS-06**: System stores full response text with brand mention highlighting for browsing
 
 ### Automation
 
@@ -105,12 +105,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DATA-06 | Phase 2 | Complete |
 | DATA-07 | Phase 2 | Complete |
 | DATA-08 | Phase 2 | Complete |
-| ANLS-01 | Phase 2 | Pending |
-| ANLS-02 | Phase 2 | Pending |
-| ANLS-03 | Phase 2 | Pending |
-| ANLS-04 | Phase 2 | Pending |
-| ANLS-05 | Phase 2 | Pending |
-| ANLS-06 | Phase 2 | Pending |
+| ANLS-01 | Phase 2 | Complete |
+| ANLS-02 | Phase 2 | Complete |
+| ANLS-03 | Phase 2 | Complete |
+| ANLS-04 | Phase 2 | Complete |
+| ANLS-05 | Phase 2 | Complete |
+| ANLS-06 | Phase 2 | Complete |
 | AUTO-01 | Phase 2 | Pending |
 | AUTO-02 | Phase 2 | Pending |
 | AUTO-03 | Phase 2 | Pending |
