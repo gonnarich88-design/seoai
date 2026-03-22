@@ -11,6 +11,14 @@ const envSchema = z.object({
   DAILY_BUDGET_PERPLEXITY: z.coerce.number().default(1.0),
   DAILY_BUDGET_GEMINI: z.coerce.number().default(1.0),
   CHECK_SCHEDULE_CRON: z.string().default('0 0 * * *'),
+  SMTP_HOST: z.string().optional(),
+  SMTP_PORT: z.coerce.number().default(587),
+  SMTP_SECURE: z.string().default('false'),
+  SMTP_USER: z.string().optional(),
+  SMTP_PASS: z.string().optional(),
+  SMTP_FROM: z.string().default('SEO AI Monitor <noreply@localhost>'),
+  ALERT_EMAIL_TO: z.string().optional(),
+  WEEKLY_REPORT_CRON: z.string().default('0 9 * * 1'),
 });
 
 export const env = envSchema.parse(process.env);

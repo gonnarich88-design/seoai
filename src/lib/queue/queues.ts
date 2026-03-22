@@ -81,3 +81,24 @@ export async function addSnapshotJob(batchId: string) {
     backoff: { type: 'exponential', delay: 1000 },
   });
 }
+
+// Enqueue alert detection after snapshot aggregation
+export async function addAlertDetectionJob(data: {
+  keywordId: string;
+  brandId: string;
+  providerId: string;
+  date: string;
+}) {
+  await seoaiQueue.add('alert-detection-job', data, {
+    attempts: 3,
+    backoff: { type: 'exponential', delay: 1000 },
+  });
+}
+
+// Enqueue alert email notification
+export async function addAlertNotifyJob(data: { alertId: string }) {
+  await seoaiQueue.add('alert-notify-job', data, {
+    attempts: 3,
+    backoff: { type: 'exponential', delay: 1000 },
+  });
+}
