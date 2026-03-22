@@ -21,7 +21,7 @@ describe('setupDailyScheduler', () => {
     const { setupDailyScheduler } = await import('../scheduler-setup');
     await setupDailyScheduler();
 
-    expect(mockQueue.upsertJobScheduler).toHaveBeenCalledOnce();
+    expect(mockQueue.upsertJobScheduler).toHaveBeenCalledTimes(2);
     expect(mockQueue.upsertJobScheduler).toHaveBeenCalledWith(
       'daily-check-scheduler',
       expect.any(Object),
