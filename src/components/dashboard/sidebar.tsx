@@ -3,12 +3,14 @@
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { KeywordSelector } from './keyword-selector';
+import { AlertBadge } from './alert-badge';
 
 const dataLinks = [
   { label: 'Overview', href: '/dashboard/overview' },
   { label: 'Competitors', href: '/dashboard/competitors' },
   { label: 'Trends', href: '/dashboard/trends' },
   { label: 'Archive', href: '/dashboard/archive' },
+  { label: 'Alerts', href: '/dashboard/alerts' },
 ];
 
 const managementLinks = [
@@ -53,7 +55,14 @@ export function Sidebar() {
             href={dataHref(link.href)}
             className={linkClassName(link.href)}
           >
-            {link.label}
+            {link.label === 'Alerts' ? (
+              <span className="flex items-center justify-between w-full">
+                {link.label}
+                <AlertBadge />
+              </span>
+            ) : (
+              link.label
+            )}
           </Link>
         ))}
         <p className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2 px-3 mt-6">
