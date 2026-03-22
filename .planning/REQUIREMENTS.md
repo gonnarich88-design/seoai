@@ -40,8 +40,8 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **DASH-02**: User sees competitor comparison table showing visibility scores side-by-side
 - [x] **DASH-03**: User sees trend charts showing visibility score changes over time per keyword per platform
 - [x] **DASH-04**: User can browse full AI response archive with brand mentions highlighted
-- [ ] **DASH-05**: User can manage keywords (add, edit, delete, toggle active/inactive)
-- [ ] **DASH-06**: User can manage brands (own brand + competitors with aliases)
+- [x] **DASH-05**: User can manage keywords (add, edit, delete, toggle active/inactive)
+- [x] **DASH-06**: User can manage brands (own brand + competitors with aliases)
 
 ### Alerts & Reports
 
@@ -119,8 +119,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DASH-02 | Phase 3 | Complete |
 | DASH-03 | Phase 3 | Complete |
 | DASH-04 | Phase 3 | Complete |
-| DASH-05 | Phase 3 | Pending |
-| DASH-06 | Phase 3 | Pending |
+| DASH-05 | Phase 3 | Complete |
+| DASH-06 | Phase 3 | Complete |
 | ALRT-01 | Phase 4 | Pending |
 | ALRT-02 | Phase 4 | Pending |
 | ALRT-03 | Phase 4 | Pending |
