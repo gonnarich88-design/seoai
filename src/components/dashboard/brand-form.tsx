@@ -90,7 +90,7 @@ export function BrandForm({ brand, onClose, onSaved }: BrandFormProps) {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="e.g. Acme Inc"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
           />
 
           <label className="flex items-center gap-2 mt-4">
@@ -114,7 +114,7 @@ export function BrandForm({ brand, onClose, onSaved }: BrandFormProps) {
               value={aliasInput}
               onChange={(e) => setAliasInput(e.target.value)}
               placeholder="Add alias..."
-              className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm"
+              className="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   e.preventDefault();
