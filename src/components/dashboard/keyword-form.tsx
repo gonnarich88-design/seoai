@@ -73,7 +73,7 @@ export function KeywordForm({ keyword, onClose, onSaved }: KeywordFormProps) {
             value={label}
             onChange={(e) => setLabel(e.target.value)}
             placeholder="e.g. Best CRM software"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
           />
 
           <label className="block text-sm font-medium text-gray-700 mb-1 mt-4">
@@ -84,7 +84,7 @@ export function KeywordForm({ keyword, onClose, onSaved }: KeywordFormProps) {
             onChange={(e) => setPrompt(e.target.value)}
             rows={4}
             placeholder="e.g. What is the best CRM software for small businesses?"
-            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
+            className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
           />
 
           {error && <p className="text-sm text-red-600 mt-2">{error}</p>}

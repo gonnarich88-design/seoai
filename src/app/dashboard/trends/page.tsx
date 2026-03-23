@@ -111,7 +111,7 @@ export default function TrendsPage() {
           onChange={(e) =>
             setSelectedBrand(e.target.value || null)
           }
-          className="px-3 py-2 border border-gray-300 rounded-md text-sm"
+          className="px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
         >
           <option value="">Own brand</option>
           {brands.map((b) => (
@@ -124,7 +124,7 @@ export default function TrendsPage() {
         <select
           value={days}
           onChange={(e) => setDays(Number(e.target.value))}
-          className="px-3 py-2 border border-gray-300 rounded-md text-sm"
+          className="px-3 py-2 border border-gray-300 rounded-md text-sm text-gray-900"
         >
           {dayOptions.map((d) => (
             <option key={d} value={d}>

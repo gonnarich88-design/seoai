@@ -77,6 +77,14 @@ export function Sidebar() {
             {link.label}
           </Link>
         ))}
+        <div className="mt-6 border-t border-gray-200 pt-4">
+          <Link
+            href="/dashboard/help"
+            className={linkClassName('/dashboard/help')}
+          >
+            Help
+          </Link>
+        </div>
       </nav>
     </aside>
   );
