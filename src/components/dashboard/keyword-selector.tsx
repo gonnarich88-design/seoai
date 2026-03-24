@@ -47,7 +47,7 @@ export function KeywordSelector() {
       <select
         value={currentKeyword}
         onChange={handleChange}
-        className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm bg-white text-gray-900"
       >
         <option value="">Select keyword...</option>
         {keywords.map((k) => (

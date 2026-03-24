@@ -33,16 +33,30 @@ interface Brand {
 
 const platforms = ['chatgpt', 'perplexity', 'gemini'] as const;
 
+interface ProviderStatus {
+  chatgpt: boolean;
+  gemini: boolean;
+  perplexity: boolean;
+}
+
 export default function OverviewPage() {
   const searchParams = useSearchParams();
   const keyword = searchParams.get('keyword');
 
+  const [providerStatus, setProviderStatus] = useState<ProviderStatus | null>(null);
   const [snapshots, setSnapshots] = useState<Snapshot[]>([]);
   const [trendData, setTrendData] = useState<
     Array<{ date: string; chatgpt: number; perplexity: number; gemini: number }>
   >([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/config/status')
+      .then((r) => r.json())
+      .then((data) => setProviderStatus(data.providers))
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     fetch('/api/brands')
@@ -133,9 +147,30 @@ export default function OverviewPage() {
     isOwn: s.brandId === ownBrandId,
   }));
 
+  const missingProviders = providerStatus
+    ? Object.entries(providerStatus)
+        .filter(([, hasKey]) => !hasKey)
+        .map(([name]) => name)
+    : [];
+
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-6">Overview</h2>
+
+      {missingProviders.length > 0 && (
+        <div className="mb-6 px-4 py-3 bg-yellow-50 border border-yellow-200 rounded-md text-sm text-yellow-800">
+          <span className="font-medium">API keys not configured:</span>{' '}
+          {missingProviders.join(', ')} — checks for these providers will be skipped.
+          {missingProviders.length === 3 && (
+            <span className="block mt-1">
+              No providers are configured. Set at least one of{' '}
+              <code className="font-mono">OPENAI_API_KEY</code>,{' '}
+              <code className="font-mono">GOOGLE_GENERATIVE_AI_API_KEY</code>, or{' '}
+              <code className="font-mono">PERPLEXITY_API_KEY</code> to start collecting data.
+            </span>
+          )}
+        </div>
+      )}
 
       <div className="grid grid-cols-3 gap-4 mb-8">
         {platforms.map((p) => {

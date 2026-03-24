@@ -13,11 +13,11 @@
     "services:down": "docker compose down"
   },
   "dependencies": {
-    "@ai-sdk/google": "^3.0.52",
-    "@ai-sdk/openai": "^3.0.47",
-    "@ai-sdk/perplexity": "^3.0.25",
+    "@ai-sdk/google": "^3.0.53",
+    "@ai-sdk/openai": "^3.0.48",
+    "@ai-sdk/perplexity": "^3.0.26",
     "@bull-board/api": "^6.20.6",
-    "ai": "^4.3.19",
+    "ai": "^6.0.137",
     "bullmq": "^5.71.0",
     "date-fns": "^4.1.0",
     "dotenv": "^17.3.1",

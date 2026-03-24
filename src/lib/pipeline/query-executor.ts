@@ -28,9 +28,11 @@ export async function executeQuery(
   const result = await generateText({ model, prompt });
 
   const latencyMs = Date.now() - start;
-  const { promptTokens, completionTokens, totalTokens } = result.usage;
+  const promptTokens = result.usage.inputTokens ?? 0;
+  const completionTokens = result.usage.outputTokens ?? 0;
+  const totalTokens = promptTokens + completionTokens;
   const costUsd = calculateCost(providerId, promptTokens, completionTokens);
-  // AI SDK v4: Perplexity returns result.sources as array of {url, title} objects
+  // Perplexity returns sources as array of {url, title} objects
   const citations = (result as any).sources?.map((s: { url: string }) => s.url) ?? [];
 
   return { text: result.text, promptTokens, completionTokens, totalTokens, costUsd, latencyMs, citations };

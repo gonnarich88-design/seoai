@@ -13,6 +13,12 @@ const runCheckSchema = z.object({
 
 const PROVIDERS: ProviderId[] = ['chatgpt', 'perplexity', 'gemini'];
 
+const PROVIDER_ENV_KEYS: Record<ProviderId, string> = {
+  chatgpt: 'OPENAI_API_KEY',
+  gemini: 'GOOGLE_GENERATIVE_AI_API_KEY',
+  perplexity: 'PERPLEXITY_API_KEY',
+};
+
 export async function POST(request: NextRequest) {
   const body = await request.json();
   const parsed = runCheckSchema.safeParse(body);
@@ -32,6 +38,12 @@ export async function POST(request: NextRequest) {
   const results: Array<{ providerId: string; batchId: string | null; status: string }> = [];
 
   for (const providerId of PROVIDERS) {
+    // Skip providers without API keys configured
+    if (!process.env[PROVIDER_ENV_KEYS[providerId]]) {
+      results.push({ providerId, batchId: null, status: 'no_api_key' });
+      continue;
+    }
+
     const withinBudget = await checkBudget(providerId);
     if (!withinBudget) {
       results.push({ providerId, batchId: null, status: 'budget_exceeded' });
@@ -49,13 +61,23 @@ export async function POST(request: NextRequest) {
     results.push({ providerId, batchId, status: 'queued' });
   }
 
-  const allExceeded = results.every(r => r.status === 'budget_exceeded');
-  if (allExceeded) {
-    return NextResponse.json({ error: 'Budget exceeded for all providers', results }, { status: 402 });
+  const allSkipped = results.every(r => r.status === 'budget_exceeded' || r.status === 'no_api_key');
+  if (allSkipped) {
+    const hasNoKey = results.some(r => r.status === 'no_api_key');
+    const hasBudget = results.some(r => r.status === 'budget_exceeded');
+    let error = 'Could not queue any provider.';
+    if (hasNoKey && !hasBudget) error = 'No AI provider API keys configured. Please set OPENAI_API_KEY, GOOGLE_GENERATIVE_AI_API_KEY, or PERPLEXITY_API_KEY.';
+    else if (hasBudget && !hasNoKey) error = 'Budget exceeded for all providers.';
+    return NextResponse.json({ error, results }, { status: 402 });
   }
 
+  const queued = results.filter(r => r.status === 'queued').map(r => r.providerId);
+  const skipped = results.filter(r => r.status !== 'queued').map(r => r.providerId);
+
   return NextResponse.json({
-    message: 'Check triggered',
+    message: skipped.length > 0
+      ? `Check queued for ${queued.join(', ')}. Skipped: ${skipped.join(', ')} (no API key or budget exceeded).`
+      : 'Check triggered',
     keywordId,
     results,
   }, { status: 200 });
