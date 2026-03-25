@@ -67,12 +67,25 @@ export default function KeywordsPage() {
           setPolling(null);
         };
 
-        if (anyComplete) {
-          setCheckResult({ id: keywordId, message: 'Check complete — results are now in Overview.', type: 'success' });
+        if (anyComplete && allResolved) {
+          const failedLines = batchIds
+            .filter((bid) => batches[bid]?.failed)
+            .map((bid) => {
+              const provider = providerMap[bid] ?? batches[bid]?.providerId ?? bid;
+              return batches[bid]?.error ? `• ${provider}: ${batches[bid].error}` : null;
+            })
+            .filter(Boolean);
+          if (failedLines.length > 0) {
+            setCheckResult({
+              id: keywordId,
+              message: `Check complete (some providers failed):\n${failedLines.join('\n')}\nResults available in Overview.`,
+              type: 'success',
+            });
+          } else {
+            setCheckResult({ id: keywordId, message: 'Check complete — results are now in Overview.', type: 'success' });
+          }
           setPolling(null);
         } else if (allResolved) {
-          showFailures();
-        } else if (anyFailed && elapsed > 20_000) {
           showFailures();
         } else if (elapsed > 90_000) {
           setCheckResult({ id: keywordId, message: 'Check is taking longer than expected — results will appear in Overview when ready.', type: 'success' });

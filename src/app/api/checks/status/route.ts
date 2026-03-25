@@ -19,13 +19,9 @@ export async function GET(request: NextRequest) {
     .from(queryRuns)
     .where(inArray(queryRuns.batchId, batchIds));
 
-  // Check BullMQ for failed/delayed/active jobs matching these batchIds
+  // Check BullMQ for jobs that have exhausted all retries (truly failed)
   const queue = new Queue('seoai-jobs', { connection });
-  const [failedJobs, delayedJobs, activeJobs] = await Promise.all([
-    queue.getFailed(0, 300),
-    queue.getDelayed(),
-    queue.getActive(),
-  ]);
+  const failedJobs = await queue.getFailed(0, 300);
   await queue.close();
 
   function cleanError(raw: string): string {
@@ -36,24 +32,8 @@ export async function GET(request: NextRequest) {
 
   const failedByBatch: Record<string, { error: string; providerId: string }> = {};
 
-  // Check fully-failed jobs first (most accurate)
   for (const job of failedJobs) {
     if (job.data?.batchId && batchIds.includes(job.data.batchId) && job.failedReason) {
-      failedByBatch[job.data.batchId] = {
-        error: cleanError(job.failedReason),
-        providerId: job.data.providerId ?? 'unknown',
-      };
-    }
-  }
-
-  // Also check delayed/active jobs that have a failedReason from a previous attempt
-  for (const job of [...delayedJobs, ...activeJobs]) {
-    if (
-      job.data?.batchId &&
-      batchIds.includes(job.data.batchId) &&
-      job.failedReason &&
-      !failedByBatch[job.data.batchId]
-    ) {
       failedByBatch[job.data.batchId] = {
         error: cleanError(job.failedReason),
         providerId: job.data.providerId ?? 'unknown',
